@@ -22,7 +22,8 @@ on:
 jobs:
   analyze:
     name: Analyze
-    runs-on: ncats-onprem-internal-runners
+    runs-on: 
+      group: ncats-onprem-internal-runners
     timeout-minutes: ${{ (matrix.language == 'swift' && 120) || 360 }}
     permissions:
       # required for all workflows
